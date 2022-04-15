@@ -441,7 +441,7 @@ void ToolBarLayout::Private::performLayout()
             moreButtonInstance->setX(0.0);
         }
 
-        if (heightMode == AlwaysFill || (heightMode == ConstrainIfLarger && moreButtonInstance->height() > maxHeight)) {
+        if ((heightMode == AlwaysFill || (heightMode == ConstrainIfLarger && moreButtonInstance->height() > maxHeight)) && q->height() != 0) {
             moreButtonInstance->setHeight(q->height());
         }
 
